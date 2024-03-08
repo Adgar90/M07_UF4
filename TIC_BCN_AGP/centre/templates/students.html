@@ -1,4 +1,12 @@
 {% extends 'index.html' %}
 {% block content %}
-    <h1>Estem en Students</h1>
+<h1>Estem en Students</h1>
+<ul>
+    {% for student in students %}
+    <li>{{ students.index(student) }}</li>
+    <li>{{ student.nom }}</li>
+    <li>{{ student.cognom1 }}</li>
+    <li>{{ student.cognom2 }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}

@@ -3,3 +3,9 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
+
+def students(request):
+    return render(request, 'students.html')
+
+def teachers(request):
+    return render(request, 'teachers.html')

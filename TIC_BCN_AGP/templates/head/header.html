@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+</head>
+<body>
+<ul>
+    <li><a href="{% url 'students' %}">STUDENTS</a></li>
+    <li><a href="{% url 'teachers' %}">TEACHERS</a></li>
+</ul>
+
+</body>
+</html>

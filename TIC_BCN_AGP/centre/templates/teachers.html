@@ -13,7 +13,7 @@
         <td>{{ teacher.id }}</td>
         <td>{{ teacher.nom }}</td>
         <td>{{ teacher.cognom1 }}</td>
-        <td><a class="btn" href="{% url 'teacher' teacher.id %}">+ INFO</a></td>
+        <td><a href="{% url 'teacher' teacher.id %}">+ INFO</a></td>
     </tr>
     {% endfor %}
 </table>

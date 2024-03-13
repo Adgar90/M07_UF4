@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- per carregar els estils CSS que es troben a la carpeta 'static' -->
 {% load static %}
 <html lang="en">
 <head>
@@ -10,8 +11,10 @@
     <link rel="stylesheet" href="{% static 'styles/index.css' %}">
 </head>
 <body>
+<!-- incloem el header amb include perquè el carregui cada cop que es carrega l'index-->
 {% include "head/header.html" %}
     <h1>PRÀCTICA 1 - VIEWS I TEMPLATES</h1>
+    <!-- block content que exten el nostre index i que conté el template de la view que es cridi segons la funció que utilitzem-->
     {% block content %}
 
     {% endblock %}

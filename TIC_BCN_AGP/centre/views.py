@@ -1,8 +1,8 @@
 from django.shortcuts import render
-# Index view
+# Funció que mostra el nostre index per defecte
 def index(request):
     return render(request, 'index.html')
-
+# Funció que mostra la view de 'students' i que rep com a 'context' els estudiants del centre
 def students(request):
     students = [
         {
@@ -170,7 +170,7 @@ def students(request):
     ]
     context = { 'students': students }
     return render(request, 'students.html', context)
-
+# Funció que mostra la view de 'teachers' i que rep com a 'context' els professors del centre
 def teachers(request):
     teachers = [
     {
@@ -216,7 +216,7 @@ def teachers(request):
 ]
     context = { 'teachers': teachers }
     return render(request, 'teachers.html', context)
-
+# Funció que mostra la informació completa d'un estudiant en concret i que rep la seva id com a paràmetre
 def student(request, id):
     students = [
         {
@@ -387,7 +387,7 @@ def student(request, id):
         if (i['id'] == id):
             student_obj = i
     return render(request, 'student.html', {'student':student_obj})
-
+# Funció que mostra la informació completa d'un professor en concret i que rep la seva id com a paràmetre
 def teacher(request, id):
     teachers = [
     {

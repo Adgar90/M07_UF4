@@ -1,12 +1,20 @@
 {% extends 'index.html' %}
 {% block content %}
-<h1>Estem en Students</h1>
-<ul>
+<h1>INFORMACIÓ ESTUDIANTS TIC BARCELONA (aplicació centre)</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>COGNOM1</th>
+    </tr>
+
     {% for student in students %}
-    <li>{{ students.index(student) }}</li>
-    <li>{{ student.nom }}</li>
-    <li>{{ student.cognom1 }}</li>
-    <li>{{ student.cognom2 }}</li>
+    <tr>
+        <td>{{ student.id }}</td>
+        <td>{{ student.nom }}</td>
+        <td>{{ student.cognom1 }}</td>
+        <td><a href="{% url 'student' student.id %}">+ INFO</a></td>
+    </tr>
     {% endfor %}
-</ul>
+</table>
 {% endblock %}

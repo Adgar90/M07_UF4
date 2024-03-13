@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>INFORMACIÓ ESTUDIANT: {{ student.nom }}</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>COGNOM1</th>
+        <th>COGNOM2</th>
+        <th>EMAIL</th>
+        <th>CURS</th>
+        <th>MODULS</th>
+    </tr>
+    <tr>
+        <td>{{ student.id }}</td>
+        <td>{{ student.nom }}</td>
+        <td>{{ student.cognom1 }}</td>
+        <td>{{ student.cognom2 }}</td>
+        <td>{{ student.email }}</td>
+        <td>{{ student.curs }}</td>
+        <td>{{ student.moduls }}</td>
+    </tr>
+</table><br>
+<a class="btn" href="{% url 'students' %}">Go back</a>
+{% endblock %}

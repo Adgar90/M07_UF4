@@ -1,0 +1,7 @@
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    margin: 0px;
+    background-color: #012B39;
+}

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>INFORMACIÓ PROFESSOR: {{ teacher.nom }}</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NOM</th>
+        <th>COGNOM1</th>
+        <th>COGNOM2</th>
+        <th>EMAIL</th>
+        <th>CURS</th>
+        <th>TUTOR</th>
+        <th>MODULS</th>
+    </tr>
+
+
+    <tr>
+        <td>{{ teacher.id }}</td>
+        <td>{{ teacher.nom }}</td>
+        <td>{{ teacher.cognom1 }}</td>
+        <td>{{ teacher.cognom2 }}</td>
+        <td>{{ teacher.email }}</td>
+        <td>{{ teacher.curs }}</td>
+        <td>{{ teacher.tutor|yesno:'Sí,No' }}</td>
+        <td>{{ teacher.modul }}</td>
+    </tr>
+</table><br>
+<a class="btn" href="{% url 'teachers' %}">Go back</a>
+{% endblock %}

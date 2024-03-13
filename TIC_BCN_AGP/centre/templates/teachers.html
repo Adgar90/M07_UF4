@@ -6,11 +6,6 @@
         <th>ID</th>
         <th>NOM</th>
         <th>COGNOM1</th>
-        <th>COGNOM2</th>
-        <th>EMAIL</th>
-        <th>CURS</th>
-        <th>TUTOR</th>
-        <th>MODULS</th>
     </tr>
 
     {% for teacher in teachers %}
@@ -18,11 +13,7 @@
         <td>{{ teacher.id }}</td>
         <td>{{ teacher.nom }}</td>
         <td>{{ teacher.cognom1 }}</td>
-        <td>{{ teacher.cognom2 }}</td>
-        <td>{{ teacher.email }}</td>
-        <td>{{ teacher.curs }}</td>
-        <td>{{ teacher.tutor | yesno:"Sí,No"  }}</td>
-        <td>{{ teacher.modul }}</td>
+        <td><a href="{% url 'teacher' teacher.id %}">+ INFO</a></td>
     </tr>
     {% endfor %}
 </table>

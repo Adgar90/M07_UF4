@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% block content %}
-<h1>INFORMACIÓ ESTUDIANTS TIC BARCELONA (aplicació centre)</h1>
+<h1>INFORMACIÓ ESTUDIANT: {{ student.nom }}</h1>
 <table>
     <tr>
         <th>ID</th>
@@ -11,8 +11,6 @@
         <th>CURS</th>
         <th>MODULS</th>
     </tr>
-
-
     <tr>
         <td>{{ student.id }}</td>
         <td>{{ student.nom }}</td>
@@ -22,5 +20,6 @@
         <td>{{ student.curs }}</td>
         <td>{{ student.moduls }}</td>
     </tr>
-</table>
+</table><br>
+<a class="btn" href="{% url 'students' %}">Go back</a>
 {% endblock %}

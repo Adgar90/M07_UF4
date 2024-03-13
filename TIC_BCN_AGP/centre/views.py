@@ -431,6 +431,8 @@ def teacher(request, id):
         'modul': 'M08, MAH'
     }
 ]
+    teacher_obj = None
     for i in teachers:
         if (i['id'] == id):
-            print('true')
+            teacher_obj = i
+    return render(request, 'teacher.html', {'teacher':teacher_obj})

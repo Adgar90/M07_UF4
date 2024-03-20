@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import UserForm
 # Funció que mostra el nostre index per defecte
 def index(request):
     return render(request, 'index.html')
@@ -436,3 +437,8 @@ def teacher(request, id):
         if (i['id'] == id):
             teacher_obj = i
     return render(request, 'teacher.html', {'teacher':teacher_obj})
+# Funció que crea un formulari i el redirigeix com a context a la view d'user_form
+def user_form(request):
+    form = UserForm()
+    context = {"form":form}
+    return render(request, 'user_form.html', context)

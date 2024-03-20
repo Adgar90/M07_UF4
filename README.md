@@ -28,3 +28,18 @@ Exemple de mostra centre/teachers:
 
 [Video pràctica 2](https://drive.google.com/file/d/1FEGNWsyxQVy6IeDwGSOy5uhwOS9o5QjC/view?usp=sharing)
 
+# PRÀCTICA 3
+
+1.
+    Crear un formulari (sense funcionalitat) per afegir alumnat i professorat...
+- S’ha de tindre una BBDD amb els camps necessaris (sense comptar id). 
+- El formulari ha de tindre tots els camps de la taula de la BBDD.
+
+El template del projecte haurà de tindre 2 enllaços (alumnat i professorat) que ja s’han implementat a la pràctica 1, i se li afegirà 1 enllaç més pel formulari. Quan se li doni a l’enllaç del formulari, a sota, s’haurà de renderitzar el formulari. Es podrà utilitzar el formulari fins que se li doni a qualsevol altre enllaç.
+
+#### CAPTURES
+##### Amb as_p
+![AMB as_p](img_3.png)
+##### Sense as_p
+![SENSE as_p](img_2.png)
+

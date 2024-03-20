@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+body, .submit {
   background: #105469;
   font-family: 'Open Sans', sans-serif;
 }
@@ -14,11 +14,20 @@ body {
 li {
     list-style: none;
 }
-table {
+table, form {
   background: #012B39;
   border-radius: 0.25em;
   border-collapse: collapse;
   margin: 1em;
+}
+form {
+  width: fit-content;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+.center {
+    display:flex;
+    justify-content:center;
 }
 th {
   border-bottom: 1px solid #364043;
@@ -28,7 +37,8 @@ th {
   padding: 0.5em 1em;
   text-align: left;
 }
-td, h1 {
+
+td, h1, p, input, select, h2 {
   color: #fff;
   font-weight: 400;
   padding: 0.65em 1em;
@@ -68,15 +78,45 @@ touch-action: manipulation;
 }
 
 a:hover,
-a:focus {
-    background-color: #F082AC;
+a:focus,
+.submit:hover,
+.submit:focus{
+  background-color: #F082AC;
 }
-h1 {
-    background: #012B39;
-    margin: 0.5em;
-    border: groove;
+h1, h2 {
+  background: #012B39;
+  margin: 0.5em;
+  border: 2px solid grey;
+  text-align: center;
+  border-radius: 10px;
 }
 .btn {
-    background-color: #012B39;
-    margin: 1em;
+  background-color: #012B39;
+  margin: 1em;
+}
+input, select {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid grey;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+option {
+  color:black;
+}
+.submit {
+  width: 75%;
+  margin-left: 45px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 0px;
+}
+label {
+  color: #E2B842;
+  font-size: 0.85em;
+  font-weight: 600;
 }

@@ -21,8 +21,9 @@ table, form {
   margin: 1em;
 }
 form {
-    width: fit-content;
-    border-radius: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  border: 2px solid grey;
 }
 .center {
     display:flex;
@@ -37,7 +38,7 @@ th {
   text-align: left;
 }
 
-td, h1, p, input, select {
+td, h1, p, input, select, h2 {
   color: #fff;
   font-weight: 400;
   padding: 0.65em 1em;
@@ -82,10 +83,12 @@ a:focus,
 .submit:focus{
   background-color: #F082AC;
 }
-h1 {
+h1, h2 {
   background: #012B39;
   margin: 0.5em;
-  border: groove;
+  border: 2px solid grey;
+  text-align: center;
+  border-radius: 10px;
 }
 .btn {
   background-color: #012B39;
@@ -109,6 +112,7 @@ option {
   width: 75%;
   margin-left: 45px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border: 0px;
 }
 label {

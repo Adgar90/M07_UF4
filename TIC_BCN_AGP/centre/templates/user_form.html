@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block content %}
+    <h1>Formulari d'usuari</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+<a class="btn" href="{% url 'teachers' %}">Go back</a>
+{% endblock %}

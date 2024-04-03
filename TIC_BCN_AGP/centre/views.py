@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import UserForm
 # Funció que mostra el nostre index per defecte
 def index(request):
@@ -440,5 +440,10 @@ def teacher(request, id):
 # Funció que crea un formulari i el redirigeix com a context a la view d'user_form
 def user_form(request):
     form = UserForm()
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(form['role'].value())
     context = {"form":form}
     return render(request, 'user_form.html', context)

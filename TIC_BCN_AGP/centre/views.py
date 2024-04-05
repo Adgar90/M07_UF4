@@ -34,4 +34,14 @@ def user_form(request):
             return redirect(role_template)
     context = {"form":form}
     return render(request, 'user_form.html', context)
-
+def update_user(request, id):
+    user = User.objects.get(id=id)
+    form = UserForm(instance=user)
+    if request.method == 'POST':
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            role_template = 'students' if form['role'].value() == "S" else 'teachers'
+            return redirect(role_template)
+    context = {"form":form}
+    return render(request, 'user_form.html', context)

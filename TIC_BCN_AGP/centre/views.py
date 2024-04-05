@@ -444,6 +444,8 @@ def user_form(request):
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect(form['role'].value())
+            role_template = 'students' if form['role'].value() == "S" else 'teachers'
+            return redirect(role_template)
     context = {"form":form}
     return render(request, 'user_form.html', context)
+

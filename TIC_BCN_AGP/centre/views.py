@@ -45,3 +45,13 @@ def update_user(request, id):
             return redirect(role_template)
     context = {"form":form}
     return render(request, 'user_form.html', context)
+
+def delete_user(request, id):
+    user = User.objects.get(id=id)
+    role_template = 'students' if user.role == "S" else 'teachers'
+    if request.method == 'POST':
+        user.delete()
+        return redirect(role_template)
+
+    context = {'user':user}
+    return render(request, 'delete_user_confirm.html', context)

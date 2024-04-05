@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% block content %}
+<h1>¿Segur que vols esborrar el següent usuari?</h1>
+<table>
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.nom }}</td>
+        <td>{{ user.cognom1 }}</td>
+        <td>{{ user.cognom2 }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.curs }}</td>
+        <td>{{ user.moduls }}</td>
+    </tr>
+</table><br>
+<form class="delForm" action="" method="post">
+    {% csrf_token %}
+    <button class="delBtn" type="submit">Confirmar</button>
+</form>
+<a class="btn" href="{% url 'index' %}">Go back</a>
+{% endblock %}

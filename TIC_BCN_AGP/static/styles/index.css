@@ -74,7 +74,7 @@ a {
     vertical-align: baseline;
     user-select: none;
     -webkit-user-select: none;
-touch-action: manipulation;
+    touch-action: manipulation;
 }
 
 a:hover,
@@ -119,4 +119,25 @@ label {
   color: #E2B842;
   font-size: 0.85em;
   font-weight: 600;
+}
+.delBtn {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #012B39;
+    margin: 1em;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+}
+.delBtn:hover {
+    background-color: #F082AC;
+}
+.delForm {
+    background: #105469;
+    border: none;
 }

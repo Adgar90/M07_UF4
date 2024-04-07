@@ -16,5 +16,9 @@
     {% csrf_token %}
     <button class="delBtn" type="submit">Confirmar</button>
 </form>
-<a class="btn" href="{% url 'index' %}">Go back</a>
+{% if user.role == "S" %}
+  <a class="btn" href="{% url 'students' %}">Go back</a>
+{% else %}
+  <a class="btn" href="{% url 'teachers' %}">Go back</a>
+{% endif %}
 {% endblock %}

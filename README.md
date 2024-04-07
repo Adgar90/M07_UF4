@@ -43,3 +43,32 @@ El template del projecte haurà de tindre 2 enllaços (alumnat i professorat) qu
 ##### Sense as_p
 ![SENSE as_p](img_2.png)
 
+# PRÀCTICA 4
+
+
+1. Crear el CRUD del vostre projecte. Penseu que el formulari (no funcional) ja el teniu creat de la pràctica anterior, només cal afegir-li la funcionalitat.
+
+   - És OBLIGATORI fer un commit per a cada element del CRUD creat. És a dir, una vegada tingueu funcional el Create, fer un commit de missatge “Create acabat”. I així amb el Read, Update i Delete.
+
+   - En cas d’haver de modificar algún error d’un commit anterior (per exemple del Create), posar de missatge “modificació Create”.
+
+#### CAPTURES
+
+##### CREATE
+![img_4.png](img_4.png)
+![img_5.png](img_5.png)
+##### READ
+![img_6.png](img_6.png)
+![img_7.png](img_7.png)
+![img_8.png](img_8.png)
+##### UPDATE
+![img_9.png](img_9.png)
+![img_10.png](img_10.png)
+![img_11.png](img_11.png)
+##### DELETE
+![img_12.png](img_12.png)
+![img_13.png](img_13.png)
+![img_14.png](img_14.png)
+
+
+[Video pràctica 4](https://drive.google.com/file/d/1CSPRwXn50YNHzARjolWsPAMXIFHaXiLC/view?usp=sharing)

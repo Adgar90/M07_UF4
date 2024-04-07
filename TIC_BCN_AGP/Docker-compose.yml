@@ -17,7 +17,7 @@ services:
     ports:
       - "80:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: 2023_adria.garcia@iticb.cat
+      PGADMIN_DEFAULT_EMAIL: 2023_adria.garcia@iticbcn.cat
       PGADMIN_DEFAULT_PASSWORD: adri123
     volumes:
       - pgadmin-data:/var/lib/pgadmin

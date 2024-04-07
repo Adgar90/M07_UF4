@@ -12,4 +12,6 @@ urlpatterns = [
     #Path (/teachers/teacher/1) que crida la funció teacher de views.py i la qual rep la id com a paràmetre
     path('teachers/teacher/<int:id>', views.teacher, name='teacher'),
     path('user-form/', views.user_form, name='user_form'),
+    path('update-user/<int:id>', views.update_user, name='update-user'),
+    path('delete-user/<int:id>', views.delete_user, name='delete-user'),
 ]

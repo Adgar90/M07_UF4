@@ -19,6 +19,8 @@
         <td>{{ student.email }}</td>
         <td>{{ student.curs }}</td>
         <td>{{ student.moduls }}</td>
+        <td><a href="{% url 'update-user' student.id %}">EDIT</a></td>
+        <td><a href="{% url 'delete-user' student.id %}">DELETE</a></td>
     </tr>
 </table><br>
 <a class="btn" href="{% url 'students' %}">Go back</a>

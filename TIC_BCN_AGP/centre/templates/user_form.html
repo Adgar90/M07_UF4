@@ -9,5 +9,11 @@
         <input class="submit" type="submit">
     </form>
 </div>
+{% if form.role.value == "S" %}
+  <a class="btn" href="{% url 'students' %}">Go back</a>
+{% elif form.role.value == "T" %}
+  <a class="btn" href="{% url 'teachers' %}">Go back</a>
+{% else %}
 <a class="btn" href="{% url 'index' %}">Go back</a>
+{% endif %}
 {% endblock %}
